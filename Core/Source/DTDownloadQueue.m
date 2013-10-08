@@ -59,6 +59,7 @@ typedef enum {
 {
 	self.download = [[DTDownload alloc] initWithURL:self.downloadItem.URL withDestinationFile:self.downloadItem.destinationFile];
 	self.download.context = self.downloadItem;
+    self.download.additionalHTTPHeaders = self.downloadItem.additionalHTTPHeaders;
 	self.download.delegate = delegate;
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[self.download start];

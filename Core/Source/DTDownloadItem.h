@@ -21,6 +21,14 @@
  */
 @property (nonatomic, strong) NSString *destinationFile;
 
+/**
+ Using for HTTP headers parameters. For example, basic http authentification
+ 
+ @see additionalHTTPHeaders
+ */
+
+@property (nonatomic, copy) NSDictionary *additionalHTTPHeaders;
+
 
 /**
  Creates a download item
